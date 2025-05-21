@@ -4,7 +4,7 @@ from api import get_team_id_by_name, find_fixture_id, get_prediction_by_fixture_
 import os
 
 st.set_page_config(
-    page_title="Foci Meccs Előrejelző",
+    page_title="Foci Meccs Előrejelző, licenszjog: Mészáros Péter",
     layout="wide",
     page_icon="⚽"
 )
@@ -106,7 +106,7 @@ with st.sidebar:
     </div>
     <div style='background:#fffde7; border-radius:14px; padding:0.7em 1em; margin-bottom:1em;'>
         <div style='color:#8d6e63; font-weight:600; font-size:1.08rem; text-align:center;'>
-            <span style='font-size:1.3em;'>🏟️</span> Több ezer meccs statisztika
+            <span style='font-size:1.3em;'>🏟️</span> Több százezer meccs statisztikája alapján
         </div>
     </div>
     <div style='background:#e8f5e9; border-radius:14px; padding:0.7em 1em; margin-bottom:1.2em;'>
@@ -116,7 +116,7 @@ with st.sidebar:
     </div>
     <div style='display:flex; justify-content:center; margin-bottom:1.5em;'>
         <span style='background:#00c853; color:#fff; padding:0.5em 1.2em; border-radius:22px; font-weight:700; font-size:1.09rem; display:inline-flex; align-items:center;'>
-            <span style='font-size:1.2em; margin-right:0.4em;'>✔️</span> Kapcsolódva az API-hoz!
+            <span style='font-size:1.2em; margin-right:0.4em;'>✔️</span> Kapcsolódva a rendszerhez!
         </span>
     </div>
     <div style='font-size:0.97rem; color:#bdbdbd; text-align:center;'>SoccerAI &copy; 2025</div>
@@ -150,7 +150,7 @@ selected_fixture_label = None
 if fixture_options:
     selected_fixture_label = st.selectbox("Válassz elérhető meccset:", fixture_options)
 else:
-    st.info("Nincs elérhető mérkőzés ezen a napon az API-ban.")
+    st.info("Nincs elérhető mérkőzés ezen a napon a rendszerben.")
 
 st.markdown("<div style='margin-top:1.2em'></div>", unsafe_allow_html=True)
 predict_btn = st.button("🔮 Előrejelzés!")
